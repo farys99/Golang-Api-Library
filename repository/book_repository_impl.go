@@ -12,8 +12,7 @@ type BookRepositoryImpl struct {
 }
 
 func NewBookRepository() BookRepository {
-	/*belum di proses*/
-	return nil
+	return &BookRepositoryImpl{}
 }
 
 func (repository *BookRepositoryImpl) GetAll(ctx context.Context, tx sql.Tx) []domain.Book {
@@ -62,11 +61,14 @@ func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx sql.Tx, bo
 }
 
 func (repository *BookRepositoryImpl) Update(ctx context.Context, tx sql.Tx, book domain.Book) domain.Book {
-	//TODO implement me
-	panic("implement me")
+	SQL := "update book set title = ?, years = ?, publisher = ? where id = ?"
+	_, err := tx.ExecContext(ctx, SQL, book.Id, book.Title, book.Years, book.Publisher)
+	helper.PanicIfError(err)
+	return book
 }
 
 func (repository *BookRepositoryImpl) Delete(ctx context.Context, tx sql.Tx, book domain.Book) {
-	//TODO implement me
-	panic("implement me")
+	SQL := "delete from book where id = ?"
+	_, err := tx.ExecContext(ctx, SQL, book.Id)
+	helper.PanicIfError(err)
 }
