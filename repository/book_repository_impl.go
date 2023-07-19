@@ -5,6 +5,7 @@ import (
 	"ApiLibrary/model/domain"
 	"context"
 	"database/sql"
+	"errors"
 )
 
 type BookRepositoryImpl struct {
@@ -44,9 +45,20 @@ func (repository *BookRepositoryImpl) Create(ctx context.Context, tx sql.Tx, boo
 	return book
 }
 
-func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx sql.Tx, bookId int) domain.Book {
-	//TODO implement me
-	panic("implement me")
+func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx sql.Tx, bookId int) (domain.Book, error) {
+	SQL := "select id, title, years, publisher from book where id =?"
+	rows, err := tx.QueryContext(ctx, SQL, bookId)
+	helper.PanicIfError(err)
+	defer rows.Close()
+
+	books := domain.Book{}
+	if rows.Next() {
+		err := rows.Scan(&books.Id, &books.Title, &books.Years, &books.Publisher)
+		helper.PanicIfError(err)
+		return books, nil
+	} else {
+		return books, errors.New("book is not found")
+	}
 }
 
 func (repository *BookRepositoryImpl) Update(ctx context.Context, tx sql.Tx, book domain.Book) domain.Book {
