@@ -1,0 +1,268 @@
+{
+  "openapi":"3.0.3",
+  "info": {
+    "title":"Restful Api Library Golang",
+    "version":"1.0.0"
+  },
+  "servers": [
+    {"url":"https://localhost:3000/api"}
+  ],
+  "paths": {
+    "/library" : {
+      "get" : {
+        "security": [
+          {
+            "AuthforLibrary" : []
+          }
+        ],
+        "tags": [
+          "Library Api"
+        ],
+        "summary": "List all books",
+        "description": "List all books",
+        "responses": {
+          "200" : {
+            "description": "Success get all books",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Books"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "security": [
+          {
+            "AuthforLibrary" : []
+          }
+        ],
+        "tags": [
+          "Library Api"
+        ],
+        "description": "Create new BookList",
+        "summary": "Create new BookList",
+        "requestBody": {
+          "content": {
+            "application/json" :{
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrUpdateBook"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200" : {
+            "description": "Success create Booklist",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "$ref": "#/components/schemas/Books"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/library/{libraryId}" : {
+      "get" : {
+        "security": [
+          {
+            "AuthforLibrary" : []
+          }
+        ],
+        "tags": [
+          "Library Api"
+        ],
+        "summary": "Get Book by Id",
+        "description": "Get book by Id",
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "description": "Library Id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success get book by Id",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" :{
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Books"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "security": [
+          {"AuthforLibrary" : []}
+        ],
+        "tags": ["Library Api"],
+        "summary": "Update Books",
+        "description": "Update book",
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "description": "Library Id"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json" : {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrUpdateBook"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200" : {
+            "description": "Success Update Book",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    },
+                    "data" : {
+                      "$ref": "#/components/schemas/Books"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {"AuthforLibrary" : []}
+        ],
+        "tags": ["Library Api"],
+        "summary": "Delete Books",
+        "description": "Delete book",
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "description": "Library Id"
+          }
+        ],
+        "responses": {
+          "200" : {
+            "description": "Success Delete Book",
+            "content": {
+              "application/json" : {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code" : {
+                      "type": "number"
+                    },
+                    "status" : {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Books" : {
+        "type": "object",
+        "properties": {
+          "id" : {
+            "type": "number"
+          },
+          "title" : {
+            "type": "string"
+          },
+          "year" : {
+            "type": "string"
+          },
+          "publisher" : {
+            "type": "string"
+          }
+        }
+      },
+      "CreateOrUpdateBook" : {
+        "type": "object",
+        "properties": {
+          "title" : {
+            "type": "string"
+          },
+          "year" : {
+            "type": "string"
+          },
+          "publisher" : {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AuthforLibrary" : {
+        "type": "apiKey",
+        "in" : "header",
+        "name": "API-key-Library",
+        "description": "Authentication for library API"
+      }
+    }
+  }
+}
