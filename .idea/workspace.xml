@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="controller">
-      <change afterPath="$PROJECT_DIR$/app/database.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exception/error_handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/auth_middleware.go" afterDir="false" />
+    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="bug in tsting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/book_controller_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller_impl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/book_service_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/book_service_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_contract.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_contract.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,7 @@
       <list>
         <option value="OpenAPI" />
         <option value="Go File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -70,12 +65,32 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="HTTP Request.All in test">
+    <configuration name="All in test" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test.http">
+      <method v="2" />
+    </configuration>
     <configuration name="test | Get All Book" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" requestIdentifier="Get All Book" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="SwaggerCodegen">
+      <option name="activeConfigurationType" value="FILE" />
+      <option name="configurationPath" value="" />
+      <option name="customJreEnabled" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="enableDebugLogging" value="false" />
+      <option name="generateToPath" value="C:\Users\62821\GolandProjects\farys99\ApiLibrary\gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.0.0/openapi-generator-cli-5.0.0.jar" />
+      <option name="jdkPath" value="" />
+      <option name="language" value="java" />
+      <option name="specificationPath" value="C:\Users\62821\GolandProjects\farys99\ApiLibrary\api_contract.json" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.All in test" />
         <item itemvalue="HTTP Request.test | Get All Book" />
       </list>
     </recent_temporary>
@@ -99,7 +114,8 @@
     <MESSAGE value="add logic in book_repository_impl.go" />
     <MESSAGE value="service" />
     <MESSAGE value="controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller" />
+    <MESSAGE value="bug in tsting" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug in tsting" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
