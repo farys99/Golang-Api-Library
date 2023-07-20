@@ -16,27 +16,26 @@ func NewBookController(BookService service.BookService) BookController {
 	}
 }
 
-func (controller *BookControllerImpl) GetAll(writer http.ResponseWriter, request *http.Request, param httprouter.Param) {
+func (controller *BookControllerImpl) GetAll(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
+
+}
+
+func (controller *BookControllerImpl) Create(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (controller *BookControllerImpl) Create(writer http.ResponseWriter, request *http.Request, param httprouter.Param) {
+func (controller *BookControllerImpl) GetById(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (controller *BookControllerImpl) GetById(writer http.ResponseWriter, request *http.Request, param httprouter.Param) {
+func (controller *BookControllerImpl) Update(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
 	//TODO implement me
 	panic("implement me")
 }
 
-func (controller *BookControllerImpl) Update(writer http.ResponseWriter, request *http.Request, param httprouter.Param) {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (controller *BookControllerImpl) Delete(writer http.ResponseWriter, request *http.Request, param httprouter.Param) {
+func (controller *BookControllerImpl) Delete(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
 	//TODO implement me
 	panic("implement me")
 }

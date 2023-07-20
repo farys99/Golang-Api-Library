@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="service">
-      <change afterPath="$PROJECT_DIR$/controller/book_controller.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/book_controller_impl.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exception/not_found_error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/return_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/tx.go" afterDir="false" />
+    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/book_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/book_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/book_repository_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/book_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/book_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/book_controller_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/book_controller_impl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/book_service_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/book_service_impl.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +83,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add logic in book_repository_impl.go" />
     <MESSAGE value="service" />
-    <option name="LAST_COMMIT_MESSAGE" value="service" />
+    <MESSAGE value="controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

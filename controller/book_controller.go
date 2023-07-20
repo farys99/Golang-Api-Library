@@ -6,9 +6,9 @@ import (
 )
 
 type BookController interface {
-	GetAll(writer http.ResponseWriter, request *http.Request, param httprouter.Param)
-	Create(writer http.ResponseWriter, request *http.Request, param httprouter.Param)
-	GetById(writer http.ResponseWriter, request *http.Request, param httprouter.Param)
-	Update(writer http.ResponseWriter, request *http.Request, param httprouter.Param)
-	Delete(writer http.ResponseWriter, request *http.Request, param httprouter.Param)
+	GetAll(writer http.ResponseWriter, request *http.Request, param httprouter.Params)
+	Create(writer http.ResponseWriter, request *http.Request, param httprouter.Params)
+	GetById(writer http.ResponseWriter, request *http.Request, param httprouter.Params)
+	Update(writer http.ResponseWriter, request *http.Request, param httprouter.Params)
+	Delete(writer http.ResponseWriter, request *http.Request, param httprouter.Params)
 }
