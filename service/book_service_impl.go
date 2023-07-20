@@ -17,11 +17,11 @@ type BookServiceImpl struct {
 	Validate       *validator.Validate
 }
 
-func NewBookServiceImpl(BookRepository repository.BookRepository, DB *sql.DB, Validate *validator.Validate) BookService {
+func NewBookService(BookRepository repository.BookRepository, DB *sql.DB, validate *validator.Validate) BookService {
 	return &BookServiceImpl{
 		BookRepository: BookRepository,
 		DB:             DB,
-		Validate:       Validate,
+		Validate:       validate,
 	}
 }
 
