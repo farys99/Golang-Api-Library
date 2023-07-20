@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="add logic in book_repository_impl.go">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/web/book_create_request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/web/book_response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/web/book_update_request.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/web/web_response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/book_service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/book_service_impl.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/38d6a667-19c4-4e02-ad73-d1ba57d82ebe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/38d6a667-19c4-4e02-ad73-d1ba57d82ebe.xml" afterDir="false" />
+    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="service">
+      <change afterPath="$PROJECT_DIR$/controller/book_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/book_controller_impl.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exception/not_found_error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/return_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/tx.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/book_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/book_repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/book_repository_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/book_repository_impl.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/book_service_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/book_service_impl.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,33 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "C:/Users/62821",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Console"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/62821&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -89,7 +88,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add logic in book_repository_impl.go" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logic in book_repository_impl.go" />
+    <MESSAGE value="service" />
+    <option name="LAST_COMMIT_MESSAGE" value="service" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

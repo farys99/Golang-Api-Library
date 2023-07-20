@@ -15,7 +15,7 @@ func NewBookRepository() BookRepository {
 	return &BookRepositoryImpl{}
 }
 
-func (repository *BookRepositoryImpl) GetAll(ctx context.Context, tx sql.Tx) []domain.Book {
+func (repository *BookRepositoryImpl) GetAll(ctx context.Context, tx *sql.Tx) []domain.Book {
 	SQL := "select id, title, years, publisher from book"
 	rows, err := tx.QueryContext(ctx, SQL)
 	helper.PanicIfError(err)
@@ -31,7 +31,7 @@ func (repository *BookRepositoryImpl) GetAll(ctx context.Context, tx sql.Tx) []d
 	return books
 }
 
-func (repository *BookRepositoryImpl) Create(ctx context.Context, tx sql.Tx, book domain.Book) domain.Book {
+func (repository *BookRepositoryImpl) Create(ctx context.Context, tx *sql.Tx, book domain.Book) domain.Book {
 
 	SQL := "insert into book(title, years, publisher) values(?)"
 	result, err := tx.ExecContext(ctx, SQL, book.Title, book.Years, book.Publisher)
@@ -44,7 +44,7 @@ func (repository *BookRepositoryImpl) Create(ctx context.Context, tx sql.Tx, boo
 	return book
 }
 
-func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx sql.Tx, bookId int) (domain.Book, error) {
+func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx *sql.Tx, bookId int) (domain.Book, error) {
 	SQL := "select id, title, years, publisher from book where id =?"
 	rows, err := tx.QueryContext(ctx, SQL, bookId)
 	helper.PanicIfError(err)
@@ -60,14 +60,14 @@ func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx sql.Tx, bo
 	}
 }
 
-func (repository *BookRepositoryImpl) Update(ctx context.Context, tx sql.Tx, book domain.Book) domain.Book {
+func (repository *BookRepositoryImpl) Update(ctx context.Context, tx *sql.Tx, book domain.Book) domain.Book {
 	SQL := "update book set title = ?, years = ?, publisher = ? where id = ?"
 	_, err := tx.ExecContext(ctx, SQL, book.Id, book.Title, book.Years, book.Publisher)
 	helper.PanicIfError(err)
 	return book
 }
 
-func (repository *BookRepositoryImpl) Delete(ctx context.Context, tx sql.Tx, book domain.Book) {
+func (repository *BookRepositoryImpl) Delete(ctx context.Context, tx *sql.Tx, book domain.Book) {
 	SQL := "delete from book where id = ?"
 	_, err := tx.ExecContext(ctx, SQL, book.Id)
 	helper.PanicIfError(err)
