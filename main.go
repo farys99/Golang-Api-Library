@@ -1,13 +1,13 @@
-package ApiLibrary
+package main
 
 import (
 	"ApiLibrary/app"
 	"ApiLibrary/controller"
 	"ApiLibrary/helper"
-	"ApiLibrary/middleware"
 	"ApiLibrary/repository"
 	"ApiLibrary/service"
 	"github.com/go-playground/validator/v10"
+	_ "github.com/go-sql-driver/mysql"
 	"net/http"
 )
 
@@ -22,8 +22,9 @@ func main() {
 
 	server := http.Server{
 
-		Addr:    "localhost:3000",
-		Handler: middleware.NewAuthMiddleware(router),
+		Addr: "localhost:3000",
+		//Handler: middleware.NewAuthMiddleware(router),
+		Handler: router,
 	}
 	err := server.ListenAndServe()
 	helper.PanicIfError(err)

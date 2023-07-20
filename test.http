@@ -1,4 +1,14 @@
 ### Get All Book
 GET http://localhost:3000/api/library
-X-API-Key: RAHASIA
 Accept: application/json
+
+### Create new book
+POST http://localhost:3000/api/library
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title" : "Filosofi Teras",
+  "years" : "2020",
+  "publisher" : "Henry Manampiring"
+}
