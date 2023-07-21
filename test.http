@@ -8,7 +8,26 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title" : "Filosofi Teras",
-  "years" : "2020",
-  "publisher" : "Henry Manampiring"
+  "title" : "Seni untuk bersikap bodo amat",
+  "years" : "111",
+  "publisher" : "Times new Roman"
 }
+
+### Update book
+PUT http://localhost:3000/api/library/6
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title" : "aaaaaa",
+  "years" : "22222",
+  "publisher" : "colleger t"
+}
+
+### Get book by Id
+GET http://localhost:3000/api/library/2
+Accept: application/json
+
+### Delete book by id
+DELETE http://localhost:3000/api/library/2
+Accept: application/json

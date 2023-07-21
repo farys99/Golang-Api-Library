@@ -33,7 +33,7 @@ func (repository *BookRepositoryImpl) GetAll(ctx context.Context, tx *sql.Tx) []
 
 func (repository *BookRepositoryImpl) Create(ctx context.Context, tx *sql.Tx, book domain.Book) domain.Book {
 
-	SQL := "insert into book(title, years, publisher) values(?)"
+	SQL := "insert into book(title, years, publisher) values(?,?,?)"
 	result, err := tx.ExecContext(ctx, SQL, book.Title, book.Years, book.Publisher)
 	helper.PanicIfError(err)
 

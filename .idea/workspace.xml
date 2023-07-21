@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="bug in tsting">
+    <list default="true" id="c57345ca-9233-4945-a1ea-ff529f8169de" name="Changes" comment="internal server error without auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth_middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth_middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/book_repository_impl.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/book_repository_impl.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/test.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,52 +39,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "C:/Users/62821",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Console"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/62821&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="HTTP Request.test | Get All Book">
-    <configuration name="go build ApiLibrary" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="ApiLibrary" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="ApiLibrary" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="All in test" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/test.http">
-      <method v="2" />
-    </configuration>
+}</component>
+  <component name="RunManager" selected="HTTP Request.test | Get book by Id">
     <configuration name="test | Create new book" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="2" requestIdentifier="Create new book" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | Create new category" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="2" requestIdentifier="Create new category" runType="Run single request">
+    <configuration name="test | Delete book by id" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="4" requestIdentifier="Delete book by id" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="test | Get All Book" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" requestIdentifier="Get All Book" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test | Get book by Id" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="4" requestIdentifier="Get book by Id" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="test | Update book" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test.http" index="3" requestIdentifier="Update book" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="SwaggerCodegen">
@@ -107,19 +98,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build ApiLibrary" />
+      <item itemvalue="HTTP Request.test | Delete book by id" />
+      <item itemvalue="HTTP Request.test | Get book by Id" />
+      <item itemvalue="HTTP Request.test | Update book" />
       <item itemvalue="HTTP Request.test | Create new book" />
-      <item itemvalue="HTTP Request.All in test" />
-      <item itemvalue="HTTP Request.test | Create new category" />
       <item itemvalue="HTTP Request.test | Get All Book" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.test | Get book by Id" />
+        <item itemvalue="HTTP Request.test | Update book" />
+        <item itemvalue="HTTP Request.test | Delete book by id" />
         <item itemvalue="HTTP Request.test | Get All Book" />
         <item itemvalue="HTTP Request.test | Create new book" />
-        <item itemvalue="Go Build.go build ApiLibrary" />
-        <item itemvalue="HTTP Request.test | Create new category" />
-        <item itemvalue="HTTP Request.All in test" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +134,8 @@
     <MESSAGE value="service" />
     <MESSAGE value="controller" />
     <MESSAGE value="bug in tsting" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug in tsting" />
+    <MESSAGE value="internal server error without auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="internal server error without auth" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
