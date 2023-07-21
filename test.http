@@ -8,26 +8,26 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title" : "Seni untuk bersikap bodo amat",
-  "years" : "111",
-  "publisher" : "Times new Roman"
+  "title" : "kosong",
+  "years" : "0000",
+  "publisher" : "kosong"
 }
 
 ### Update book
-PUT http://localhost:3000/api/library/6
+PUT http://localhost:3000/api/library/8
 Accept: application/json
 Content-Type: application/json
 
 {
-  "title" : "aaaaaa",
-  "years" : "22222",
-  "publisher" : "colleger t"
+  "title" : "Coding is Fun",
+  "years" : "2023",
+  "publisher" : "Sholeh Al Farys"
 }
 
 ### Get book by Id
-GET http://localhost:3000/api/library/2
+GET http://localhost:3000/api/library/7
 Accept: application/json
 
 ### Delete book by id
-DELETE http://localhost:3000/api/library/2
+DELETE http://localhost:3000/api/library/4
 Accept: application/json

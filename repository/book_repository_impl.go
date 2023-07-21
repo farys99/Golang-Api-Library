@@ -62,7 +62,7 @@ func (repository *BookRepositoryImpl) GetById(ctx context.Context, tx *sql.Tx, b
 
 func (repository *BookRepositoryImpl) Update(ctx context.Context, tx *sql.Tx, book domain.Book) domain.Book {
 	SQL := "update book set title = ?, years = ?, publisher = ? where id = ?"
-	_, err := tx.ExecContext(ctx, SQL, book.Id, book.Title, book.Years, book.Publisher)
+	_, err := tx.ExecContext(ctx, SQL, book.Title, book.Years, book.Publisher, book.Id)
 	helper.PanicIfError(err)
 	return book
 }

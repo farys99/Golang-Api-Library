@@ -44,7 +44,7 @@ func (controller *BookControllerImpl) Create(writer http.ResponseWriter, request
 }
 
 func (controller *BookControllerImpl) GetById(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
-	bookId := param.ByName("bookId")
+	bookId := param.ByName("libraryId")
 	id, err := strconv.Atoi(bookId)
 	helper.PanicIfError(err)
 
@@ -61,7 +61,7 @@ func (controller *BookControllerImpl) Update(writer http.ResponseWriter, request
 	bookUpdateRequest := web.BookUpdateRequest{}
 	helper.ReadFromRequestBody(request, &bookUpdateRequest)
 
-	bookId := param.ByName("bookId")
+	bookId := param.ByName("libraryId")
 	id, err := strconv.Atoi(bookId)
 	helper.PanicIfError(err)
 
@@ -77,7 +77,7 @@ func (controller *BookControllerImpl) Update(writer http.ResponseWriter, request
 }
 
 func (controller *BookControllerImpl) Delete(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
-	bookId := param.ByName("bookId")
+	bookId := param.ByName("libraryId")
 	id, err := strconv.Atoi(bookId)
 	helper.PanicIfError(err)
 
