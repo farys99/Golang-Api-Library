@@ -4,9 +4,10 @@ import (
 	"ApiLibrary/helper"
 	"ApiLibrary/model/web"
 	"ApiLibrary/service"
-	"github.com/julienschmidt/httprouter"
 	"net/http"
 	"strconv"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 type BookControllerImpl struct {
@@ -20,8 +21,8 @@ func NewBookController(BookService service.BookService) BookController {
 }
 
 func (controller *BookControllerImpl) GetAll(writer http.ResponseWriter, request *http.Request, param httprouter.Params) {
-
 	bookResponse := controller.BookService.GetAll(request.Context())
+
 	webResponse := web.WebResponse{
 		Code:   200,
 		Status: "OK",

@@ -3,11 +3,12 @@ package app
 import (
 	"ApiLibrary/helper"
 	"database/sql"
+	"os"
 	"time"
 )
 
 func NewDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/golang_api_library")
+	db, err := sql.Open("mysql", os.Getenv("DATABASE_URL"))
 	helper.PanicIfError(err)
 
 	db.SetMaxIdleConns(5)
