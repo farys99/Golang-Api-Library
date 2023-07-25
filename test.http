@@ -1,9 +1,11 @@
 ### Get All Book
 GET http://localhost:3000/api/library
+X-API-Key: RAHASIA
 Accept: application/json
 
 ### Create new book
 POST http://localhost:3000/api/library
+X-API-Key: RAHASIA
 Accept: application/json
 Content-Type: application/json
 
@@ -14,20 +16,23 @@ Content-Type: application/json
 }
 
 ### Update book
-PUT http://localhost:3000/api/library/8
+PUT http://localhost:3000/api/library/10
+X-API-Key: RAHASIA
 Accept: application/json
 Content-Type: application/json
 
 {
-  "title" : "Coding is Fun",
-  "years" : "2023",
-  "publisher" : "Sholeh Al Farys"
+  "title" : "Buku itu hijau",
+  "years" : "1995",
+  "publisher" : "Fulan1"
 }
 
 ### Get book by Id
-GET http://localhost:3000/api/library/7
+GET http://localhost:3000/api/library/10
+X-API-Key: RAHASIA
 Accept: application/json
 
 ### Delete book by id
-DELETE http://localhost:3000/api/library/4
+DELETE http://localhost:3000/api/library/11
+X-API-Key: RAHASIA
 Accept: application/json

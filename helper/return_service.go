@@ -15,7 +15,7 @@ func ToBookResponse(book domain.Book) web.BookResponse {
 }
 
 func ToBookResponses(books []domain.Book) []web.BookResponse {
-	var bookResponses []web.BookResponse
+	bookResponses := make([]web.BookResponse, 0)
 
 	for _, book := range books {
 		bookResponses = append(bookResponses, ToBookResponse(book))
